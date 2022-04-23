@@ -1,0 +1,69 @@
+/* Jeremy Tang */
+html {
+    overflow-y:scroll;
+}
+body{
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 1em auto;
+    background-color: #e5e5f7;
+    opacity: 0.9;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+}
+section{
+    border: black solid 1px;
+    margin-bottom: 1em;
+}
+
+form{
+    width: 100%;
+    border: black solid 1px;
+    margin-bottom: 1em;
+    border-radius: 2%;
+    background-image: linear-gradient( 0deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+}
+
+form p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 1em;
+}
+
+textarea{
+    width: 300px;
+    height: 80px;
+}
+#submitlog{
+    width: 8em;
+    height: 2em;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+
+button{
+    border-radius: 4px;
+}
+
+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10em;
+}
+
+footer{
+    background-color: #aeb0b5;
+    padding: 1px;
+    border: black solid 1px;
+}
