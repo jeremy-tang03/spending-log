@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Jeremy Tang - 10-12-2021 -->
+<html lang="en">
+
+<head>
+    <title>
+        Spending Log
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+
+<header>
+
+    <form>
+        <h2>Spending Log</h2>
+        <p>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="2021-10-31">
+        </p>
+        <br>
+        <p>
+            <label>Description: </label>
+            <textarea name="description" required></textarea>
+        </p>
+        <br>
+        <p>
+            <label for="amount">Amount Spent: </label>
+            <input type="number" id="amount" name="amount" onchange="setTwoNumberDecimal(this)" required min="0"
+                max="1000" placeholder="10.00" step=".01">
+        </p>
+        <br>
+        <p>Category:
+            <input type="radio" id="school" name="category" value="School" checked>
+            <label for="school">School</label>
+            <input type="radio" id="entertainment" name="category" value="Entertainment">
+            <label for="entertainment">Entertainment</label>
+            <input type="radio" id="food" name="category" value="Food">
+            <label for="food">Food</label>
+            <input type="radio" id="other" name="category" value="Other">
+            <label for="other">Other</label>
+        </p>
+        <button id="submitlog" type="submit">
+            Add Entry
+        </button>
+    </form>
+
+</header>
+<main>
+
+</main>
+<footer>
+    <p>
+        Spending Log by Jeremy Tang
+    </p>
+</footer>
+
+</html>
