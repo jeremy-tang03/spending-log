@@ -1,60 +1,156 @@
 /* Jeremy Tang */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 html {
-    overflow-y:scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-body{
+
+body {
+    font-family: 'Montserrat', sans-serif;
     max-width: 600px;
     width: 100%;
+    height: 100%;
     text-align: center;
     margin: 1em auto;
     background-color: #e5e5f7;
-    opacity: 0.9;
+    opacity: 1;
     background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-    background-size: 10px 10px;
-}
-section{
-    border: black solid 1px;
-    margin-bottom: 1em;
+    background-image: linear-gradient(-138deg, rgba(45, 116, 213, 1) 11.2%, rgba(121, 137, 212, 1) 91.2%);
+    justify-content: center;
+    color: #fff;
 }
 
-form{
+.container {
+    margin: 5% 0px 10em;
+}
+
+.container, section {
     width: 100%;
-    border: black solid 1px;
-    margin-bottom: 1em;
-    border-radius: 2%;
-    background-image: linear-gradient( 0deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    z-index: 1;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-left: 1px solid white;
+    border-top: 1px solid white;
 }
 
-form p{
+.container::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .1);
+    filter: blur(50px);
+    margin: -100px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form p {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1em 1em;
+    flex-direction: column;
 }
 
-textarea{
-    width: 300px;
-    height: 80px;
+.topLabel {
+    margin-bottom: 0.5em;
 }
-#submitlog{
+
+p input, textarea, button {
+    background: transparent;
+    width: 250px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="radio"] {
+    margin: auto;
+}
+
+textarea {
+    border-radius: 15px;
+    resize: none;
+}
+
+.choices label {
+    font-size: 0.95em;
+    margin-right: 20px;
+}
+
+label[for="other"] {
+    margin-right: 20px;
+}
+
+#submitlog {
     width: 8em;
     height: 2em;
     font-size: 18px;
-    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.3em;
+    align-items: center;
+    padding: 0;
 }
 
-button{
-    border-radius: 4px;
+button {
+    cursor: pointer;
 }
 
-div{
+input:hover, textarea:hover {
+    background: rgba(255, 255, 255, 0.2)
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2)
+}
+
+div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 1em;
 }
 
-ul{
+section {
+    margin-bottom: 0.65em;
+    border: rgba(255, 255, 255, 0.5) solid 2px;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main section div button {
+    width: 100px;
+}
+
+ul {
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -62,7 +158,8 @@ ul{
     gap: 10em;
 }
 
-footer{
+footer {
+    display: none;
     background-color: #aeb0b5;
     padding: 1px;
     border: black solid 1px;
